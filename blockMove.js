@@ -69,7 +69,7 @@ class BlockMove {
             this.width -= this.positionBefore[0] - this.positionNow[0]
             this.positionNow[0] = this.positionBefore[0]
             // if the block is not above its old position
-        } else if (this.positionBefore[0] < this.positionNow[0] && this.positionBefore[1]) {
+        } else if (this.positionBefore[1] < this.positionNow[0] || this.positionBefore[0] > this.positionNow[0] + this.width) {
             this.width = 0;
         }
     }
